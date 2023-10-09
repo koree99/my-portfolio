@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odeleye Tobiloba Portfolio</title>
+    <link rel="icon" href="images/koree original.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/46d7328699.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init("ThjVVkBq-Z3A3dUBj");
+    })();
+    </script>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo"><img src="images/koree logo.png" alt=""></div>
+            <ul class="links">
+                <li><a href="#">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="project.html">PROJECTS</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+            <div class="toggle_btn"><i class="fa-solid fa-bars"></i>
+        </div>
+        </div>
+
+        <div class="dropdown_menu">
+            <li><a href="index.html">HOME</a></li><hr>
+            <li><a href="about.html">ABOUT</a></li><hr>
+            <li><a href="project.html">PROJECTS</a></li><hr>
+            <li><a href="#">CONTACT</a></li><hr>
+    
+        </div>
+    </header>
+<hr>
+
+<div class="container">
+    <div class="connect">
+        <h6>Let's Connect</h6>
+        <p>Send me an Email!!</p>
+    </div>
+    </div>
+    <div class="contact">
+    <fieldset>
+    <div class="contact-form">
+        <form id="form-details">
+          <label for="name">Name</label><br>
+          <input type="text" id="name"  placeholder="Enter full-name"><br>
+      
+          <!-- <label for="lastname">Last Name</label><br>
+          <input type="text" id="lastname" name="lastname" placeholder="last name"><br> -->
+      
+          <label for="email">Email</label><br>
+          <input type="email" id="email"  placeholder="Enter your email"><br>
+      
+          <label for="message">Your Message</label><br>
+          <textarea id="message" name="message" placeholder="Write something.." style="height:200px"></textarea><br>
+      
+          <button class="form-btn" value="send" onclick="sendMail()">Send Email</button>
+        </form>
+      </div>
+      </fieldset>
+      </div>
+
+      <footer>
+        <hr>
+        <div class="footer">
+        <div class="socials">
+            <a href="https://twitter.com/Korede1205"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/odeleye-tobiloba-261276251/"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.telegram.com/koree001"><i class="fa-brands fa-telegram"></i></a>
+            </div>
+        </div>
+    
+    </footer>
+
+
+
+     <script>
+        const toggleBtn = document.querySelector('.toggle_btn');
+        const toggleBtnIcon = document.querySelector('.toggle_btn i');
+        const dropDownMenu = document.querySelector('.dropdown_menu');
+
+        toggleBtn.onclick = function () {
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.contains('open')
+
+            toggleBtnIcon.classList = isOpen
+            ? "fa-solid fa-xmark"
+            : 'fa-solid fa-bars'
+
+        }
+    </script>
+</body>
+</html>
+
+
+
